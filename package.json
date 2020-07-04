@@ -1,6 +1,6 @@
 {
   "main": "node_modules/expo/AppEntry.js",
-  "name": "nexpo_app_2020",
+  "name": "nexpo-app",
   "version": "0.0.1",
   "private": true,
   "scripts": {
