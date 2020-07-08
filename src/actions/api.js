@@ -3,6 +3,8 @@ import base64 from 'react-native-base64'
 import { AsyncStorage } from '@react-native-community/async-storage'
 import * as types from './types'
 
+const BASE_URL = 'http://localhost:4000'
+
 const fetchCompaniesRequest = () => ({
   type: types.FETCH_COMPANIES_REQUEST
 })
@@ -111,7 +113,7 @@ const fetchLoginFailure = (error) => ({
 export const loadLogin = (username, password) => (dispatch) => {
   dispatch(fetchLoginRequest())
   return fetch(
-    `https://arkad-nexpo.herokuapp.com/api/login?email=${username}&password=${password}`,
+    `${BASE_URL}/api/login?email=${username}&password=${password}`,
     {
       method: 'POST'
     }
@@ -160,7 +162,7 @@ export const commentRateStudent = (studentId, rating, comment) => async (dispatc
   dispatch(fetchCommentStudentRequest())
   const token = await AsyncStorage.getItem('token')
   return fetch(
-    `https://arkad-nexpo.herokuapp.com/api/me/company/blips/${studentId}?rating=${rating}&comment=${newComment}`,
+    `${BASE_URL}/api/me/company/blips/${studentId}?rating=${rating}&comment=${newComment}`,
     {
       method: 'PATCH',
       headers: {
@@ -210,7 +212,7 @@ export const getBlips = () => async (dispatch) => {
   dispatch(fetchBlipsRequest())
   const token = await AsyncStorage.getItem('token')
   return fetch(
-    'https://arkad-nexpo.herokuapp.com/api/me/company/blips',
+    `${BASE_URL}/api/me/company/blips`,
     {
       method: 'GET',
       headers: {
@@ -260,7 +262,7 @@ export const removeBlippedStudent = (studentId) => async (dispatch) => {
   const token = await AsyncStorage.getItem('token')
   dispatch(fetchRemoveBlippedStudentRequest())
   return fetch(
-    `https://arkad-nexpo.herokuapp.com/api/me/company/blips/${studentId}`,
+    `${BASE_URL}/api/me/company/blips/${studentId}`,
     {
       method: 'DELETE',
       headers: {
@@ -309,7 +311,7 @@ const fetchStudentInfoFailure = (error) => ({
 export const getStudentInfo = (student_id) => (dispatch) => {
   dispatch(fetchStudentInfoRequest())
   return fetch(
-    `https://arkad-nexpo.herokuapp.com/api/me/company/comment/${student_id}`,
+    `${BASE_URL}/api/me/company/comment/${student_id}`,
     {
       method: 'GET'
     }
@@ -355,7 +357,7 @@ const fetchCompanyRepresentativesFailure = (error) => ({
 export const getCompanyRepresentatives = () => (dispatch) => {
   dispatch(fetchCompanyRepresentativesRequest())
   return fetch(
-    'https://arkad-nexpo.herokuapp.com/api/me/company/representatives',
+    `${BASE_URL}/api/me/company/representatives`,
     {
       method: 'GET'
     }
@@ -401,7 +403,7 @@ export const createBlip = (student_id) => async (dispatch) => {
   const token = await AsyncStorage.getItem('token')
   dispatch(fetchCreateBlipRequest())
   return fetch(
-    `https://arkad-nexpo.herokuapp.com/api/me/company/blips?student_id=${student_id}`,
+    `${BASE_URL}/api/me/company/blips?student_id=${student_id}`,
     {
       method: 'POST',
       headers: {
@@ -452,7 +454,7 @@ export const getMyInfo = () => async (dispatch) => {
   const token = await AsyncStorage.getItem('token')
   dispatch(fetchMyInfoRequest())
   return fetch(
-    'https://arkad-nexpo.herokuapp.com/api/me',
+    `${BASE_URL}/api/me`,
     {
       method: 'GET',
       headers: {
