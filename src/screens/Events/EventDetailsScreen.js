@@ -18,8 +18,8 @@ const openUrl = (url) => {
     .catch(err => Alert.alert(`Could not open URL: ${err}`))
 }
 
-const EventDetailsScreen = ({ navigation }) => {
-  const event = navigation.state.params.item
+const EventDetailsScreen = ({ route }) => {
+  const event = route.params.item
   let description = ''
   if (event.speaker !== '') {
     description += `Speaker:\t${event.speaker}\n`

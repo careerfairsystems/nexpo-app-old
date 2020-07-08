@@ -6,7 +6,7 @@ import ListItem from './ListItem'
 const SelectableListItem = ({ children, navigation, item }) => (
   <TouchableHighlight
     underlayColor={global.rowSelectionColor}
-    onPress={() => navigation.navigate('Detail', { item })}
+    onPress={() => navigation.navigate('EventDetailsScreen', { item })}
   >
     <View>
       <ListItem>{children}</ListItem>
