@@ -7,11 +7,14 @@ import fontelloConfig from '../selection.json';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import EventNavigator from './screens/Events/EventNavigator';
+import AboutNavigator from './screens/About/AboutNavigator';
+import CompaniesNavigator from './screens/Companies/CompaniesNavigator';
 import EmptyScreen from './screens/EmptyScreen';
 
 const Tab = createBottomTabNavigator();
 
 const ArkadIcon = createIconSetFromFontello(fontelloConfig)
+
 
 export default function Router() {
   return (
@@ -47,9 +50,9 @@ export default function Router() {
       >
         <Tab.Screen name="Events" component={EventNavigator} />
         <Tab.Screen name="Map" component={EmptyScreen} />
-        <Tab.Screen name="Companies" component={EmptyScreen} />
+        <Tab.Screen name="Companies" component={CompaniesNavigator} />
         <Tab.Screen name="Profile" component={EmptyScreen} />
-        <Tab.Screen name="About" component={EmptyScreen} />
+        <Tab.Screen name="About" component={AboutNavigator} />
       </Tab.Navigator>
     </NavigationContainer>
   )

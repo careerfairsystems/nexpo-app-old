@@ -25,6 +25,10 @@
 // import FaqScreenContainer from './containers/FaqScreen'
 // import FavoriteButton from './containers/FavoriteButton.js'
 
+
+// <Text style={urlText} onPress={() => Linking.openURL(item.links)}>{item.links}</Text>
+
+
 // const styles = {
 //   headerIcon: {
 //     paddingHorizontal: 16,

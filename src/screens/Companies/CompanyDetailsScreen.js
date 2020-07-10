@@ -49,13 +49,14 @@ class CompanyDetailsScreen extends Component {
   render() {
     const {
       navigation,
+      route,
       favorites,
       toggleFavorite,
       toggleChangeMap,
       toggleChangeCompany
     } = this.props
-    const { params = {} } = navigation.state
-    const company = navigation.state.params.item
+    //const { params = {} } = navigation.state
+    const company = route.params.item
     const { headerIcon } = styles
     let actionSheetData = [
       { title: 'Website', url: company.websiteUrl },
