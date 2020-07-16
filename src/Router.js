@@ -9,6 +9,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import EventNavigator from './screens/Events/EventNavigator';
 import AboutNavigator from './screens/About/AboutNavigator';
 import CompaniesNavigator from './screens/Companies/CompaniesNavigator';
+import MapNavigator from './screens/Map/MapNavigator';
+import ProfileNavigator from './screens/Profile/ProfileNavigator';
 import EmptyScreen from './screens/EmptyScreen';
 
 const Tab = createBottomTabNavigator();
@@ -49,9 +51,9 @@ export default function Router() {
         }}
       >
         <Tab.Screen name="Events" component={EventNavigator} />
-        <Tab.Screen name="Map" component={EmptyScreen} />
+        <Tab.Screen name="Map" component={MapNavigator} />
         <Tab.Screen name="Companies" component={CompaniesNavigator} />
-        <Tab.Screen name="Profile" component={EmptyScreen} />
+        <Tab.Screen name="Profile" component={ProfileNavigator} />
         <Tab.Screen name="About" component={AboutNavigator} />
       </Tab.Navigator>
     </NavigationContainer>

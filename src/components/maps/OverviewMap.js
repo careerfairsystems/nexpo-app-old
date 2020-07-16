@@ -7,7 +7,7 @@ import Svg, {
 const showHouse = (navigation, maps, toggleChangeMap, toggleChangeCompany, map) => {
   toggleChangeMap(maps[maps.indexOf(map)])
   toggleChangeCompany(0)
-  navigation.navigate('House')
+  navigation.navigate('HouseScreen')
 }
 
 const OverviewMap = ({
@@ -310,7 +310,7 @@ const OverviewMap = ({
       <G
         fontSize={11.631}
         fontWeight="300"
-        fontFamily="HelveticaNeueLTCom-Th,Helvetica Neue LT Com"
+        //fontFamily="HelveticaNeueLTCom-Th,Helvetica Neue LT Com"
       >
         <Text transform="rotate(78.12 -302.453 286.997)">T</Text>
         <Text transform="rotate(78.12 -305.165 290.342)">o</Text>
@@ -378,7 +378,7 @@ const OverviewMap = ({
       <Text
         transform="translate(236.37 503.24)"
         fontSize={10.113}
-        fontFamily="HelveticaNeueLTCom-ThIt,Helvetica Neue LT Com"
+        //fontFamily="HelveticaNeueLTCom-ThIt,Helvetica Neue LT Com"
         fontStyle="italic"
         letterSpacing=".04em"
       >
