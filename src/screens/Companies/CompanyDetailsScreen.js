@@ -84,8 +84,7 @@ class CompanyDetailsScreen extends Component {
               onPress={() => {
                 toggleChangeMap(company.map)
                 toggleChangeCompany(company.boothNumber)
-                navigation.navigate('MapStack')
-                navigation.navigate('House')
+                navigation.navigate('HouseScreen')
               }}
             />
           </Section>
