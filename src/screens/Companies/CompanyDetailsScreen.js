@@ -114,7 +114,7 @@ class CompanyDetailsScreen extends Component {
           ]}
         />
         <Section title='Links'>
-          <Button title={'Find out more'} onPress={() => params.actionSheet.show()} />
+          <Button title={'Find out more'} onPress={() => route.params.actionSheet.show()} />
         </Section>
 
         <ActionSheet
