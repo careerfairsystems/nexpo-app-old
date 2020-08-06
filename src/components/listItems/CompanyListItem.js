@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text } from 'react-native'
 import PropTypes from 'prop-types'
-import SelectableListItem from './SelectableListItem'
+import CompanySelectableListItem from './CompanySelectableListItem'
 import FavoriteButton from '../../containers/FavoriteButton'
 
 const styles = {
@@ -13,10 +13,10 @@ const styles = {
 
 const { title } = styles
 const CompanyListItem = ({ navigation, company }) => (
-  <SelectableListItem navigation={navigation} item={company}>
+  <CompanySelectableListItem navigation={navigation} item={company}>
     <Text style={title}>{company.name}</Text>
     <FavoriteButton company={company} color="#000" />
-  </SelectableListItem>
+  </CompanySelectableListItem>
 )
 
 CompanyListItem.propTypes = {

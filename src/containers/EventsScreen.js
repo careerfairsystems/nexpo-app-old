@@ -1,8 +1,8 @@
 import { connect } from 'react-redux'
-import EventsScreen from '../screens/Events/EventsScreen'
+import EventListScreen from '../screens/Events/EventListScreen'
 
 const mapStateToProps = state => ({
   eventList: state.eventReducer
 })
 
-export default connect(mapStateToProps)(EventsScreen)
+export default connect(mapStateToProps)(EventListScreen)

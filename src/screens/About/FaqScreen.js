@@ -4,6 +4,7 @@ import {
 } from 'react-native'
 import PropTypes from 'prop-types'
 import { Collapse, CollapseHeader, CollapseBody } from 'accordion-collapse-react-native'
+import URLText from '../../components/listItems/URLText';
 
 const styles = {
   container: { flex: 1 },
@@ -57,7 +58,8 @@ const renderFaqList = categories => categories.map(category => (
           <View style={qaContainer}>
             <Text style={questionText}>{item.question}</Text>
             <Text style={answerText}>{item.answer}</Text>
-            <Text style={urlText} onPress={() => Linking.openURL(item.links)}>{item.links}</Text>
+            
+            <URLText url={item.links}/>
           </View>
         )}
         scrollEnabled={false}

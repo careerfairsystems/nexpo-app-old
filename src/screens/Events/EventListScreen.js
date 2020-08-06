@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import EventListItem from '../../components/listItems/EventListItem'
 import SectionHeader from '../../components/SectionHeader'
 
-const EventsScreen = ({ navigation, eventList }) => (
+const EventListScreen = ({ navigation, eventList }) => (
   <SectionList
     renderItem={({ item, section }) => {
       const newItem = item
@@ -16,7 +16,7 @@ const EventsScreen = ({ navigation, eventList }) => (
   />
 )
 
-EventsScreen.propTypes = {
+EventListScreen.propTypes = {
   navigation: PropTypes.shape({ navigate: PropTypes.func.isRequired }).isRequired,
   eventList: PropTypes.arrayOf(
     PropTypes.shape({
@@ -38,4 +38,4 @@ EventsScreen.propTypes = {
   ).isRequired
 }
 
-export default EventsScreen
+export default EventListScreen

@@ -21,7 +21,7 @@ const CompanyFilterScreen = ({ navigation, filters }) => (
       <FilterSelectContainer item={filters.desiredDegree} />
     </Section>
     <View style={{ paddingVertical: 8 }}>
-      <Button title="Done" onPress={() => navigation.goBack()} />
+    <Button title="Done" onPress={() => navigation.goBack()} />
     </View>
   </DetailsScreen>
 )
