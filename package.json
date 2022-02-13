@@ -18,7 +18,7 @@
     "@react-navigation/native": "^5.6.1",
     "@react-navigation/stack": "^5.6.2",
     "accordion-collapse-react-native": "0.3.1",
-    "ajv": "^6.12.2",
+    "ajv": "^6.12.3",
     "btoa": "^1.2.1",
     "expo": "~38.0.1",
     "expo-permissions": "^9.0.1",
